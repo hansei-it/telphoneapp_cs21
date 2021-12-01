@@ -40,6 +40,7 @@ namespace TelPhoneApp {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRemove = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -139,7 +140,7 @@ namespace TelPhoneApp {
             this.btnRemove.TabIndex = 1;
             this.btnRemove.Text = "삭제";
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // groupBox3
             // 
@@ -197,6 +198,16 @@ namespace TelPhoneApp {
             this.txtRemove.Size = new System.Drawing.Size(134, 21);
             this.txtRemove.TabIndex = 0;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(438, 284);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(107, 89);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.Text = "출력";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -204,6 +215,7 @@ namespace TelPhoneApp {
             this.ClientSize = new System.Drawing.Size(849, 587);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
@@ -237,6 +249,7 @@ namespace TelPhoneApp {
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRemove;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
 
