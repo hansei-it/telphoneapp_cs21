@@ -15,41 +15,20 @@ namespace TelPhoneApp {
             InitializeComponent();
         }
         private void btnAdd_Click(object sender, EventArgs e) {
-            Person per = new Person(txtName.Text, txtPhone.Text);
-            pList.Add(per);
-            Text = pList.Count.ToString();
-            UpdateDisplay();
+            if (txtName.Text != "" && txtPhone.Text != "") {
+                Person per = new Person(txtName.Text, txtPhone.Text);
+                pList.Add(per);
+
+                txtName.Text = "";
+                txtPhone.Text = "";
+                txtName.Focus();
+                UpdateDisplay();
+            }
         }
         private void UpdateDisplay() {
             lbDisplay.Items.Clear();
             for (int i = 0; i < pList.Count; ++i)
                 lbDisplay.Items.Add(pList[i].ToString());
-        }
-    }
-    public class Person {
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public Person(string n="", string p="") {
-            Name = n;
-            Phone = p;
-        }
-        public override string ToString() {
-            return $"Name: {Name}, Phone: {Phone}";
-        }
-    }
-    public class People {
-        List<Person> perList = new List<Person>();
-        public void Add(Person per) {
-            perList.Add(per);
-        }
-        public void AddRange(Person[] parr) {
-            perList.AddRange(parr);
-        }
-        public Person this[int idx] {
-            get { return perList[idx]; }
-        }
-        public int Count {
-            get { return perList.Count; }
         }
     }
 }
